@@ -1,0 +1,33 @@
+h1 {
+  color: turquoise;
+  font-style: monospace;
+  padding: 100px;
+  margin-bottom: -150px;
+}
+h2 {
+  font-weight: 600;
+  background-color: beige;
+  width: 300px;
+  border-style: solid;
+  margin-top: 200px;
+}
+.pantryItems {
+  background-color: lightgrey;
+  width: 200px;
+  padding: 5px;
+  margin: 5px;
+  float: left;
+}
+.freezerItems {
+  background-color: lightgrey;
+  width: 200px;
+  padding: 5px;
+  margin: 5px;
+  float: left;
+}
+img {
+  float: right;
+  max-width: 10%;
+  margin-right: 700px;
+  padding: 20px;
+}

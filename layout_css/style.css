@@ -1,0 +1,26 @@
+html {
+  background-color: cornflowerblue;
+}
+body {
+  min-height: 100vh;
+  margin: 0 px;
+}
+
+#wrapper {
+  min-height: 400px;
+  background-color: rebeccapurple;
+}
+div > div {
+  height: 100px;
+  padding: 10px;
+}
+#wrapperTwo {
+  min-height: 400px;
+  background-color: #d7001c;
+}
+#wrapperTwo > div {
+  background-color: white;
+}
+#wrapperTwo > div {
+  background-color: blanchedalmond;
+}
