@@ -1,26 +1,65 @@
-html {
+/* html {
   background-color: cornflowerblue;
-}
+} */
 body {
   min-height: 100vh;
-  margin: 0 px;
+  margin: 0;
 }
-
-#wrapper {
+.wrapper {
   min-height: 400px;
-  background-color: rebeccapurple;
+  margin-bottom: 10px;
+  position: relative;
+  padding-top: 60px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: red;
+  align-items: center;
 }
-div > div {
-  height: 100px;
-  padding: 10px;
+nav {
+  background-color: cornflowerblue;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  top: 0;
 }
-#wrapperTwo {
-  min-height: 400px;
-  background-color: #d7001c;
+.picProfile {
+  background-color: cornflowerblue;
+  flex-direction: column;
+  display: flex;
 }
-#wrapperTwo > div {
+.picProfile > img {
+  height: 150px;
+}
+#navLeft {
+  position: absolute;
+  background-color: red;
+  height: 60px;
+  left: 0;
+}
+#navRight {
+  position: absolute;
+  right: 0;
+  background-color: red;
+  height: 60px;
+}
+h1 {
+  padding: 25px;
+}
+@media screen and (min-width: 600px) {
+  #navMenu {
+    display: none;
+  }
+  .picProfile {
+    color: white;
+  }
+}
+/* ^media query */
+#navMenu {
   background-color: white;
+  height: 100%;
+  width: 60px;
 }
-#wrapperTwo > div {
-  background-color: blanchedalmond;
-}
+/* breakpoints that will change when the browser window/screen is altered when either a desktop or mobile is being utilized. */
