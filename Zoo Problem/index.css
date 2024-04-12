@@ -1,0 +1,36 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+#zooAnimals {
+  position: relative;
+}
+
+#zooAnimals > .animal {
+  box-sizing: border-box;
+  border-style: solid;
+  background-color: aquamarine;
+  margin: 20px;
+  width: 300px;
+}
+img {
+  width: 200px;
+  padding-left: 50px;
+}
+.animal > ul {
+  justify-content: center;
+}
+.animal > a {
+  margin-left: 100px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  margin-right: 300px;
+  display: flex;
+  width: 300px;
+}
+.animal > h2 {
+  margin-left: 100px;
+}
+#zooAnimals > h1 {
+  margin-left: 100px;
+}
