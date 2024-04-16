@@ -56,13 +56,14 @@ body {
 }
 .about_section > img {
   /* flex: wrap; */
-  padding-left: 300px;
+  padding-left: 350px;
   width: 110px;
+  margin-top: 20px;
   /* padding-left: 200px; */
   justify-content: space-evenly;
 }
 .about_section > h2 {
-  padding-left: 600px;
+  text-align: center;
   /* margin: 100px; */
 }
 .about_section > p {
