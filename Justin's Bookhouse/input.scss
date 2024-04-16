@@ -1,0 +1,85 @@
+@use "colors";
+
+#h3 {
+  background-color: #00cc66;
+}
+
+* {
+  font-family: cursive;
+}
+html {
+  margin: 100px;
+  margin: 100px;
+}
+body {
+  //   min-height: 100vh;
+  /* margin: 100px; */
+  margin: auto;
+  margin-right: 100px;
+  margin-left: 100px;
+  padding: auto;
+}
+.backgroundImage {
+  margin: auto;
+  //   height: 1400px;
+  background-image: url("https://honeybeemill.com/cdn/shop/products/C6A54FD8-0324-4F31-9DE2-4C4E17E698B3.jpg?v=1618929313");
+  //   background-size: cover;
+  position: absolute;
+  padding-left: 200px;
+  padding-right: 200px;
+
+  //   margin-left: 100px;
+  //   margin-right: 100px;
+  //   margin-top: 0;
+  padding-top: 0px;
+  //   justify-content: center;
+  //   align-items: center;
+}
+#bookContainer {
+  //   box-sizing: border-box;
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   position: absolute;
+  width: 500px;
+  text-align: center;
+  margin-bottom: 100px;
+  margin-left: 100px;
+  margin-top: 100px;
+  margin-right: 100px;
+  flex-wrap: wrap;
+  //   flex-direction: column;
+  background-color: lavender;
+  padding-top: 20px;
+  padding-right: 20px;
+  //   padding-left: 130px;
+  //   align-items: center;
+  justify-content: center;
+}
+
+.book > img {
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  flex-wrap: wrap;
+  border-style: solid;
+  //   padding-left: 0px;
+  //   justify-content: center;
+  //   align-items: center;
+}
+
+#h1 {
+  color: aqua;
+}
+#h2 {
+  color: violet;
+}
+
+#h3 {
+  color: blue;
+}
+.book {
+  margin: 50px;
+  border-style: solid;
+}
