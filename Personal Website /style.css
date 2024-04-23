@@ -10,6 +10,8 @@ body {
   padding-bottom: 1px;
   display: flex;
   justify-content: space-between;
+  /* position: absolute; */
+  /* min-width: 400px; */
 }
 #navBar {
   display: flex;
@@ -20,6 +22,7 @@ body {
 }
 
 .firstImpression {
+  /* position: relative; */
   background-color: yellow;
   width: auto;
   display: flex;
@@ -31,10 +34,12 @@ body {
   padding-right: 100px;
   padding-top: 20px;
   font-size: large;
+  /* min-width: 350px; */
 }
 .firstImpression > img {
   /* flex-wrap: wrap; */
   width: 150px;
+  /* position: relative; */
 }
 #quote {
   font-family: cursive;
@@ -107,4 +112,9 @@ body {
 }
 textarea {
   padding-top: 10px;
+}
+@media screen and (min-width: 600px;) {
+  html {
+    height: 200px;
+  }
 }
