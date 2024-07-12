@@ -1,0 +1,93 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+
+}
+ model Events {
+  id Int @id @default(autoincrement())
+  name String 
+  event_type String 
+  date String?
+  time String 
+  info String 
+  price_range Decimal 
+  headliner_image String
+  category_id Int
+  categories Categories @relation(fields: [category_id], references: [id])
+  venue_id Int
+  venue Venues @relation(fields: [venue_id], references: [id])
+  tickets Tickets[]
+
+ }
+ model Venues {
+  id Int @id @default(autoincrement())
+  name String @unique
+  type String 
+  location String 
+  city String
+  country String 
+  seating_arrangement_img String 
+  ticket_availability Int
+  seat_capacity Int @unique
+  events Events[]
+  review Reviews[]
+ }
+ model Customer_Account {
+  id Int @id @default(autoincrement())
+  firstName String 
+  lastName String 
+  username String @unique
+  password String 
+  email String @unique 
+  phoneNumber String @unique 
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now())
+  orders Orders[]
+  reviews Reviews[]
+
+
+ }
+ model Orders {
+  id Int @id @default(autoincrement())
+  total Decimal 
+  ticket_id Int
+  tickets Tickets @relation(fields: [ticket_id], references: [id])
+  customer_id Int
+  customer Customer_Account @relation(fields: [customer_id], references: [id])
+
+ }
+ model Tickets {
+  id Int @id @default(autoincrement())
+  ticket_type String 
+  price Decimal
+  quantity Int
+  event_id Int
+  events Events @relation(fields: [event_id], references: [id])
+  orders Orders[]
+
+ }
+ model Categories {
+  id Int @id @default(autoincrement())
+  name String?
+  subCategories String?
+  events Events[]
+ }
+ model Reviews {
+  id Int @id @default(autoincrement())
+  venue_id Int
+  venue Venues @relation(fields: [venue_id], references: [id])
+  customer_id Int
+  customer Customer_Account @relation(fields: [customer_id], references: [id])
+  description String 
+  Rating Int
+ }
