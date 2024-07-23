@@ -207,3 +207,9 @@ a > .event:hover {
   text-decoration: none;
   color: black;
 }
+
+#review_form_wrapper {
+  width: 700px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+  margin-left: 50px;
+}

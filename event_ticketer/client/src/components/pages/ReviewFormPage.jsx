@@ -38,7 +38,7 @@ function ReviewFormPage() {
   };
   return (
     <>
-      <div>
+      <div id={"review_form_wrapper"}>
         <div>
           <h2>1. Select Rating</h2>
           <Typography component="legend">
