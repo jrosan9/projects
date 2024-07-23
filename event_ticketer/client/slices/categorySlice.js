@@ -12,6 +12,12 @@ const categoriesSlice = createSlice({
         return payload;
       }
     );
+    builder.addMatcher(
+      api.endpoints.getCategoryById.matchFulfilled,
+      (state, { payload }) => {
+        return payload;
+      }
+    );
   },
 });
 

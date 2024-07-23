@@ -15,6 +15,7 @@ app.use("/api/events", require("../Routes/events"));
 app.use("/api/categories", require("../Routes/categories"));
 app.use("/api/venues", require("../Routes/venues"));
 app.use("/api/auth", require("../Routes/auth"));
+app.use("/api/reviews", require("../Routes/reviews"));
 
 app.listen(port, () => {
   console.log(`app listening on port ${port}`);

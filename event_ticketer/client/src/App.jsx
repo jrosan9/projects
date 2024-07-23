@@ -3,7 +3,10 @@ import Navbar from "./components/pages/NavBar";
 import { Route, Routes } from "react-router-dom";
 import LoginRegister from "./components/pages/LoginRegister";
 import Homepage from "./components/pages/Homepage";
+import EventsByCategoryPage from "./components/pages/EventsByCategoryPage";
 import SingleEvent from "./components/pages/SingleEvent";
+import VenuePage from "./components/pages/VenuePage";
+import ReviewFormPage from "./components/pages/ReviewFormPage";
 
 function App() {
   return (
@@ -11,8 +14,14 @@ function App() {
       <Navbar />
       <Routes>
         <Route index element={<Homepage />} />
-        <Route path={"/product/:id"} element={<SingleEvent />} />
+        <Route path={"/venue/:id"} element={<VenuePage />} />
+        <Route path={"/event/:id"} element={<SingleEvent />} />
         <Route path={"/login"} element={<LoginRegister />} />
+        <Route
+          path={"events/category/:id"}
+          element={<EventsByCategoryPage />}
+        />
+        <Route path={"/review_form"} element={<ReviewFormPage />} />
       </Routes>
     </>
   );

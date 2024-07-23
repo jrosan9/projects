@@ -14,6 +14,9 @@ body {
   /* position: relative; */
   /* background-color: aqua; */
 }
+.navWrapper > a {
+  height: 50px;
+}
 .category {
   margin: 10px;
   /* align-content: center; */
@@ -120,6 +123,16 @@ a > .event:hover {
   margin: 20px;
   height: 20vh;
 }
+
+#single_event_wrapper {
+  display: flex;
+  flex: wrap;
+  /* width: 400px; */
+}
+#single_event_wrapper > .venue_img {
+  margin-right: 300px;
+  /* width: 400px; */
+}
 .venue_img > img {
   width: 600px;
   height: 800px;
@@ -130,4 +143,67 @@ a > .event:hover {
   background-position: center;
 }
 .venue_img > img:hover {
+}
+
+#eventByCategoryWrapper {
+  width: 700px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+  margin-left: 50px;
+}
+.ctgy_nav_links {
+  text-decoration: none;
+  color: black;
+}
+.category > div:hover {
+  background-color: lightgray;
+}
+
+.ticket_wrapper {
+  width: 400px;
+  border-style: solid;
+  background-color: white;
+  height: 50vh;
+}
+.tickets {
+  list-style: none;
+  margin: 10px;
+}
+.tickets_section > .slider {
+  margin-left: 70px;
+}
+.search-container {
+  width: 600px;
+  margin-left: 400px;
+  border-radius: 10px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+}
+.search-container:hover {
+  background-color: white;
+}
+
+.search-container > input {
+  width: 600px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  border-color: black;
+}
+.search-results {
+  width: 300px;
+  /* margin-left: 400px; */
+}
+.search-results > li:hover {
+  background-color: lightgray;
+}
+.search-results > li {
+  list-style: none;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.venue_name > a {
+  text-decoration: none;
+  color: black;
 }

@@ -20,6 +20,7 @@ authRouter.get("/me", requireUser, (req, res) => {
 
 authRouter.post("/register", async (req, res) => {
   try {
+    // console.log(req.body.password);
     const hashPassword = await bcrypt.hash(req.body.password, 10);
     const newUser = await prisma.customer_Account.create({
       data: {
@@ -52,8 +53,7 @@ authRouter.post("/login", async (req, res) => {
     const { username, email, password } = req.body;
     const foundUser = await prisma.customer_Account.findUnique({
       where: {
-        username: username,
-        email: email,
+        username: username || email,
       },
     });
     if (!foundUser) {

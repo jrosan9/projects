@@ -257,6 +257,7 @@ async function main() {
           "https://seatplan.com/cdn/images/c/show/moulin-rouge-broadway-hero-710wx355h-1700844304.webp",
         category_id: 1,
         venue_id: 1,
+        trending: true,
       },
 
       {
@@ -270,6 +271,7 @@ async function main() {
           "https://seatgeek.com/_next/image?url=https%3A%2F%2Fseatgeek.com%2Fimages%2Fperformers-landscape%2Fnew-york-city-fc-4cd3e9%2F297993%2F1500x2000.jpg&w=3840&q=75",
         category_id: 6,
         venue_id: 11,
+        trending: true,
       },
       {
         name: "Wicked",
@@ -282,6 +284,7 @@ async function main() {
           "https://variety.com/wp-content/uploads/2022/04/Wicked.jpg?w=1000",
         category_id: 1,
         venue_id: 4,
+        trending: true,
       },
       {
         name: "John Bishop: Back At It Tour",
@@ -294,6 +297,7 @@ async function main() {
           "https://images.squarespace-cdn.com/content/v1/55695205e4b0b0ed5ed23665/1717516797481-SOIS1K8XU1N70WSHQCSF/Static_Digital-Website_1920x1080_JohnBishop_2024_Regional_TheTownHall_0719.jpg?format=2500w",
         category_id: 2,
         venue_id: 6,
+        trending: true,
       },
       {
         name: "Aladin",
@@ -306,6 +310,7 @@ async function main() {
           "https://www.broadwayinbound.com/product-resources/Aladdin-Broadway-Musical-Tickets-500-240520.jpg",
         category_id: 1,
         venue_id: 2,
+        trending: true,
       },
       {
         name: "Hamilton",
@@ -318,6 +323,7 @@ async function main() {
           "https://npr.brightspotcdn.com/dims4/default/5b88d27/2147483647/strip/true/crop/1042x586+77+0/resize/1200x675!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fuploads%2F2018%2F7%2F16%2Fhamilton_FB.jpg",
         category_id: 1,
         venue_id: 3,
+        trending: true,
       },
       {
         name: "Hamilton",
@@ -330,6 +336,7 @@ async function main() {
           "https://npr.brightspotcdn.com/dims4/default/5b88d27/2147483647/strip/true/crop/1042x586+77+0/resize/1200x675!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fuploads%2F2018%2F7%2F16%2Fhamilton_FB.jpg",
         category_id: 1,
         venue_id: 3,
+        trending: false,
       },
       {
         name: "The Music Of Monk, Muhly, And Reich",
@@ -342,6 +349,7 @@ async function main() {
           "https://s1.ticketm.net/dam/c/f7b/ef64d601-8740-43cd-86ea-ed9b392e4f7b_105961_EVENT_DETAIL_PAGE_16_9.jpg",
         category_id: 3,
         venue_id: 6,
+        trending: false,
       },
       {
         name: "The Music Of Monk, Muhly, And Reich",
@@ -354,6 +362,7 @@ async function main() {
           "https://s1.ticketm.net/dam/c/f7b/ef64d601-8740-43cd-86ea-ed9b392e4f7b_105961_EVENT_DETAIL_PAGE_16_9.jpg",
         category_id: 3,
         venue_id: 6,
+        trending: false,
       },
 
       {
@@ -367,6 +376,7 @@ async function main() {
           "https://news.imz.at/imzfiles/819261-slideshow-joe-hisaishi-in-concert-11711410.jpg",
         category_id: 3,
         venue_id: 5,
+        trending: false,
       },
       {
         name: "Ellen's Last Stand-up",
@@ -379,6 +389,7 @@ async function main() {
           "https://s1.ticketm.net/dam/a/33d/52646a86-fdcc-48a3-a42a-708dd78a733d_EVENT_DETAIL_PAGE_16_9.jpg",
         category_id: 2,
         venue_id: 7,
+        trending: false,
       },
       {
         name: "NBA All-star Game",
@@ -391,6 +402,7 @@ async function main() {
           "https://seatgeek.com/_next/image?url=https%3A%2F%2Fseatgeek.com%2Fimages%2Fperformers-landscape%2Fnba-all-star-game-1-285dd0%2F798921%2F1500x2000.jpg&w=3840&q=75",
         category_id: 4,
         venue_id: 8,
+        trending: false,
       },
       {
         name: "MLB All-Star: Celebrity Softball Game & Future Game",
@@ -403,6 +415,7 @@ async function main() {
           "https://seatgeek.com/_next/image?url=https%3A%2F%2Fseatgeek.com%2Fimages%2Fperformers-landscape%2Fmlb-futures-and-legends-game-b94dde%2F803002%2F1500x2000.jpg&w=3840&q=75",
         category_id: 5,
         venue_id: 9,
+        trending: false,
       },
       {
         name: "MLB All-Star Game",
@@ -415,6 +428,7 @@ async function main() {
           "https://www.google.com/imgres?q=MLB%20All-Star%20Game&imgurl=https%3A%2F%2Fimg.mlbstatic.com%2Fmlb-images%2Fimage%2Fupload%2Ft_4x5%2Ft_w2208%2Fmlb%2Faiba4tldwhtzdeprqq8f.png&imgrefurl=https%3A%2F%2Fwww.mlb.com%2Fall-star&docid=3Y57YZzXEbcqjM&tbnid=tqclYpcxhGiBnM&vet=12ahUKEwiA56atl46HAxWTEVkFHT_tB_cQM3oECBsQAA..i&w=2208&h=2761&hcb=2&ved=2ahUKEwiA56atl46HAxWTEVkFHT_tB_cQM3oECBsQAA",
         category_id: 5,
         venue_id: 9,
+        trending: false,
       },
       {
         name: "HBCU Swingman Classic",
@@ -427,6 +441,7 @@ async function main() {
           "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/rdu32l1bqx8ynsfssbnv.jpg",
         category_id: 5,
         venue_id: 9,
+        trending: false,
       },
       {
         name: "Leagues Cup - Group Stage: Queretaro FC at New York City FC",
@@ -439,6 +454,7 @@ async function main() {
           "https://seatgeek.com/_next/image?url=https%3A%2F%2Fseatgeek.com%2Fimages%2Fperformers-landscape%2Fnew-york-city-fc-4cd3e9%2F297993%2F1500x2000.jpg&w=3840&q=75",
         category_id: 6,
         venue_id: 10,
+        trending: false,
       },
       {
         name: "Inter Miami CF at New York City FC",
@@ -451,6 +467,7 @@ async function main() {
           "https://seatgeek.com/_next/image?url=https%3A%2F%2Fseatgeek.com%2Fimages%2Fperformers-landscape%2Fnew-york-city-fc-4cd3e9%2F297993%2F1500x2000.jpg&w=3840&q=75",
         category_id: 6,
         venue_id: 10,
+        trending: false,
       },
       {
         name: "Philadelphia union at New York City FC ",
@@ -463,6 +480,7 @@ async function main() {
           "https://seatgeek.com/_next/image?url=https%3A%2F%2Fseatgeek.com%2Fimages%2Fperformers-landscape%2Fnew-york-city-fc-4cd3e9%2F297993%2F1500x2000.jpg&w=3840&q=75",
         category_id: 6,
         venue_id: 10,
+        trending: false,
       },
       {
         name: "Chicago Fire FC at New York City FC ",
@@ -475,6 +493,7 @@ async function main() {
           "https://seatgeek.com/_next/image?url=https%3A%2F%2Fseatgeek.com%2Fimages%2Fperformers-landscape%2Fnew-york-city-fc-4cd3e9%2F297993%2F1500x2000.jpg&w=3840&q=75",
         category_id: 6,
         venue_id: 11,
+        trending: false,
       },
 
       {
@@ -488,6 +507,7 @@ async function main() {
           "https://seatgeek.com/_next/image?url=https%3A%2F%2Fseatgeek.com%2Fimages%2Fperformers-landscape%2Fnew-york-giants-8fe855%2F2079%2F1500x2000.jpg&w=3840&q=75",
         category_id: 7,
         venue_id: 12,
+        trending: false,
       },
       {
         name: "Preseason: Detroit Lions at New York Giants  ",
@@ -500,6 +520,7 @@ async function main() {
           "https://seatgeek.com/_next/image?url=https%3A%2F%2Fseatgeek.com%2Fimages%2Fperformers-landscape%2Fnew-york-giants-8fe855%2F2079%2F1500x2000.jpg&w=3840&q=75",
         category_id: 7,
         venue_id: 12,
+        trending: false,
       },
       {
         name: "Minnesota Vikings at New York Giants  ",
@@ -512,6 +533,7 @@ async function main() {
           "https://seatgeek.com/_next/image?url=https%3A%2F%2Fseatgeek.com%2Fimages%2Fperformers-landscape%2Fnew-york-giants-8fe855%2F2079%2F1500x2000.jpg&w=3840&q=75",
         category_id: 7,
         venue_id: 12,
+        trending: false,
       },
       {
         name: "Cincinatti Bengals at New York Giants  ",
@@ -524,6 +546,7 @@ async function main() {
           "https://seatgeek.com/_next/image?url=https%3A%2F%2Fseatgeek.com%2Fimages%2Fperformers-landscape%2Fnew-york-giants-8fe855%2F2079%2F1500x2000.jpg&w=3840&q=75",
         category_id: 7,
         venue_id: 12,
+        trending: false,
       },
       {
         name: "Philadeplhia Eagles at New York Giants  ",
@@ -536,6 +559,7 @@ async function main() {
           "https://seatgeek.com/_next/image?url=https%3A%2F%2Fseatgeek.com%2Fimages%2Fperformers-landscape%2Fnew-york-giants-8fe855%2F2079%2F1500x2000.jpg&w=3840&q=75",
         category_id: 7,
         venue_id: 12,
+        trending: false,
       },
       {
         name: "Washington Commanders at New York Giants  ",
@@ -548,6 +572,7 @@ async function main() {
           "https://seatgeek.com/_next/image?url=https%3A%2F%2Fseatgeek.com%2Fimages%2Fperformers-landscape%2Fnew-york-giants-8fe855%2F2079%2F1500x2000.jpg&w=3840&q=75",
         category_id: 7,
         venue_id: 12,
+        trending: false,
       },
       {
         name: "New Orleans Saints at New York Giants  ",
@@ -560,6 +585,7 @@ async function main() {
           "https://seatgeek.com/_next/image?url=https%3A%2F%2Fseatgeek.com%2Fimages%2Fperformers-landscape%2Fnew-york-giants-8fe855%2F2079%2F1500x2000.jpg&w=3840&q=75",
         category_id: 7,
         venue_id: 12,
+        trending: false,
       },
       {
         name: "Baltimore Ravens at New York Giants  ",
@@ -572,6 +598,7 @@ async function main() {
           "https://seatgeek.com/_next/image?url=https%3A%2F%2Fseatgeek.com%2Fimages%2Fperformers-landscape%2Fnew-york-giants-8fe855%2F2079%2F1500x2000.jpg&w=3840&q=75",
         category_id: 7,
         venue_id: 12,
+        trending: false,
       },
       {
         name: "New York Liberty vs. Connecticut Sun",
@@ -584,6 +611,7 @@ async function main() {
           "https://s1.ticketm.net/dam/a/fc4/942ffb81-c4c6-465c-a9a6-e54ac0d27fc4_EVENT_DETAIL_PAGE_16_9.jpg",
         category_id: 9,
         venue_id: 13,
+        trending: false,
       },
       {
         name: "New York Liberty vs. Chicago Sky",
@@ -596,6 +624,7 @@ async function main() {
           "https://s1.ticketm.net/dam/a/fc4/942ffb81-c4c6-465c-a9a6-e54ac0d27fc4_EVENT_DETAIL_PAGE_16_9.jpg",
         category_id: 9,
         venue_id: 13,
+        trending: false,
       },
       {
         name: "New York Liberty vs Dallas Wings",
@@ -608,6 +637,7 @@ async function main() {
           "https://s1.ticketm.net/dam/a/fc4/942ffb81-c4c6-465c-a9a6-e54ac0d27fc4_EVENT_DETAIL_PAGE_16_9.jpg",
         category_id: 9,
         venue_id: 13,
+        trending: false,
       },
       {
         name: "New York Liberty vs Seattle Storm",
@@ -620,6 +650,7 @@ async function main() {
           "https://s1.ticketm.net/dam/a/fc4/942ffb81-c4c6-465c-a9a6-e54ac0d27fc4_EVENT_DETAIL_PAGE_16_9.jpg",
         category_id: 9,
         venue_id: 13,
+        trending: false,
       },
       {
         name: "Preseason: New Jersey Devils at New York Islanders",
@@ -632,6 +663,7 @@ async function main() {
           "https://seatgeek.com/_next/image?url=https%3A%2F%2Fseatgeek.com%2Fimages%2Fperformers-landscape%2Fnew-jersey-devils-59c5df%2F2118%2F1500x2000.jpg&w=3840&q=75",
         category_id: 8,
         venue_id: 13,
+        trending: false,
       },
       {
         name: "Preseason: New Jersey Devils at New York Islanders",
@@ -644,6 +676,114 @@ async function main() {
           "https://seatgeek.com/_next/image?url=https%3A%2F%2Fseatgeek.com%2Fimages%2Fperformers-landscape%2Fnew-jersey-devils-59c5df%2F2118%2F1500x2000.jpg&w=3840&q=75",
         category_id: 8,
         venue_id: 13,
+        trending: false,
+      },
+    ],
+  });
+  await prisma.reviews.createMany({
+    data: [
+      {
+        venue_id: 1,
+        customer_id: 1,
+        description:
+          "Amazing show and theatre was extremely accommodating. Please check out their plays at this venue!",
+        Rating: 5,
+      },
+      {
+        venue_id: 1,
+        customer_id: 1,
+        description: "Will definitely coming back to watch another play!",
+        Rating: 5,
+      },
+      {
+        venue_id: 2,
+        customer_id: 1,
+        description: "Will definitely coming back to watch another play!",
+        Rating: 5,
+      },
+      {
+        venue_id: 3,
+        customer_id: 1,
+        description: "Will definitely coming back to watch another play!",
+        Rating: 5,
+      },
+      {
+        venue_id: 4,
+        customer_id: 1,
+        description: "great show!",
+        Rating: 5,
+      },
+      {
+        venue_id: 4,
+        customer_id: 1,
+        description: "Great Entertainment!",
+        Rating: 4,
+      },
+      {
+        venue_id: 5,
+        customer_id: 1,
+        description: "Will definitely coming back to watch another game!",
+        Rating: 5,
+      },
+      {
+        venue_id: 5,
+        customer_id: 1,
+        description: "Comfortable seats and staff was nice. Good game.",
+        Rating: 5,
+      },
+      {
+        venue_id: 6,
+        customer_id: 1,
+        description: "Nice show.",
+        Rating: 5,
+      },
+      {
+        venue_id: 7,
+        customer_id: 1,
+        description: "Nice show.",
+        Rating: 5,
+      },
+      {
+        venue_id: 8,
+        customer_id: 1,
+        description: "Team played nicely.",
+        Rating: 5,
+      },
+      {
+        venue_id: 9,
+        customer_id: 1,
+        description: "Excellent game",
+        Rating: 5,
+      },
+      {
+        venue_id: 10,
+        customer_id: 1,
+        description: "very good game",
+        Rating: 5,
+      },
+      {
+        venue_id: 11,
+        customer_id: 1,
+        description: "very good game",
+        Rating: 5,
+      },
+      {
+        venue_id: 12,
+        customer_id: 1,
+        description: "very good game",
+        Rating: 5,
+      },
+      {
+        venue_id: 13,
+        customer_id: 1,
+        description: "very good game",
+        Rating: 5,
+      },
+      {
+        venue_id: 14,
+        customer_id: 1,
+        description: "very good game",
+        Rating: 5,
       },
     ],
   });

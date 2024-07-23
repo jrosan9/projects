@@ -8,6 +8,7 @@ CREATE TABLE "Events" (
     "info" TEXT NOT NULL,
     "price_range" DECIMAL(65,30) NOT NULL,
     "headliner_image" TEXT NOT NULL,
+    "trending" BOOLEAN NOT NULL,
     "category_id" INTEGER NOT NULL,
     "venue_id" INTEGER NOT NULL,
 

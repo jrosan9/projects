@@ -22,6 +22,7 @@ datasource db {
   info String 
   price_range Decimal 
   headliner_image String
+  trending Boolean
   category_id Int
   categories Categories @relation(fields: [category_id], references: [id])
   venue_id Int
@@ -91,3 +92,4 @@ datasource db {
   description String 
   Rating Int
  }
+

@@ -1,37 +1,31 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { api } from "./api";
 
-const eventSlice = createSlice({
-  name: "events",
-  initialState: {},
+const reviewSlice = createSlice({
+  name: "reviews",
+  initialState: [],
   reducers: {},
   extraReducers: (builder) => {
     builder.addMatcher(
-      api.endpoints.getAllEvents.matchFulfilled,
+      api.endpoints.getAllReviews.matchFulfilled,
       (state, { payload }) => {
         return payload;
       }
     );
     builder.addMatcher(
-      api.endpoints.getSingleEvent.matchFulfilled,
+      api.endpoints.getReviewsByVenueId.matchFulfilled,
       (state, { payload }) => {
         return payload;
       }
     );
     builder.addMatcher(
-      api.endpoints.getEventsByCategoryId.matchFulfilled,
+      api.endpoints.getReviewsByCustomerId.matchFulfilled,
       (state, { payload }) => {
         return payload;
       }
     );
     builder.addMatcher(
-      api.endpoints.getTrendingEvents.matchFulfilled,
-      (state, { payload }) => {
-        return payload;
-      }
-    );
-    builder.addMatcher(
-      api.endpoints.getEventsByVenueId.matchFulfilled,
+      api.endpoints.postReview.matchFulfilled,
       (state, { payload }) => {
         return payload;
       }
@@ -39,4 +33,4 @@ const eventSlice = createSlice({
   },
 });
 
-export default eventSlice.reducer;
+export default reviewSlice.reducer;
