@@ -11,6 +11,7 @@ const jwt = require("jsonwebtoken");
 const requireUser = (req, res, next) => {
   const authHeader = req.headers.authorization;
   const token = authHeader && authHeader.split(" ")[1];
+  console.log(token);
 
   if (!token) {
     return res.status(401).json({ error: "Not authenticated" });
@@ -55,9 +56,9 @@ const parseToken = async (req, res, next) => {
     next();
   } catch (error) {
     if (error.name === "JsonWebTokenError") {
-      return res.status(401).json({ error: "Invalid token" });
+      next();
     } else if (error.name === "TokenExpiredError") {
-      return res.status(401).json({ error: "Token expired" });
+      next();
     } else {
       return res.status(500).json({ error: "Internal Server Error" });
     }

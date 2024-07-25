@@ -1,17 +1,19 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
 import { fetchBaseQuery } from "@reduxjs/toolkit/query";
+import { useSelector } from "react-redux";
 
 export const api = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:5050/",
     prepareHeaders: (headers) => {
-      // Get the token from local storage or wherever it's stored
       const token = localStorage.getItem("authToken");
+      //   const token = useSelector((state) => state.auth.token);
       console.log(token);
       if (token) {
-        headers.set("Authorization", ` ${token}`);
+        headers.set("Authorization", `Bearer ${token}`);
       }
+      headers.set("Content-Type", "application/json");
       return headers;
     },
   }),
@@ -57,6 +59,7 @@ export const api = createApi({
         url: "api/reviews",
         method: "POST",
         body: review,
+        responseHandler: (response) => response.text(),
       }),
     }),
     login: build.mutation({
@@ -93,3 +96,10 @@ export const {
   useLoginMutation,
   useRegisterMutation,
 } = api;
+
+// {
+//     "venue_id":1,
+//     "customer_id":1,
+//     "Rating":2,
+//     "description":"love"
+// }

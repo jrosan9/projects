@@ -32,7 +32,7 @@ function EventsByCategoryPage() {
       ) : (
         <ul>
           {category_events.map((event) => (
-            <div key={event.id}>
+            <div key={event.id} className={"single_event_"}>
               <li>
                 <h2>{event.name}</h2>
                 <p>{event.date}</p>

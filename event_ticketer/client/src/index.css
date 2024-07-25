@@ -30,9 +30,9 @@ body {
 
 .loginLink {
   width: 140px;
-  height: 30px;
+  height: 40px;
   margin-top: 30px;
-  margin-left: 500px;
+  margin-left: 300px;
   text-decoration: none;
   color: black;
   scale: calc(1.5);
@@ -94,15 +94,28 @@ a > img {
   margin-top: 16px;
   margin-left: 5px;
 }
+/* #homepage_wrapper {
+  justify-content: center;
+} */
+#homepage_wrapper > h2 {
+  margin-left: 20px;
+}
 #event_wrapper {
   display: flex;
-  flex: wrap;
+  flex-wrap: wrap;
+  width: 100%; /* Ensure the container can expand to accommodate wrapping */
+  height: fit-content;
+  /* margin-left: 100px; */
+  /* display: flex; */
+  /* flex: wrap; */
   /* flex-wrap: wrap; */
   /* flex-direction: row; */
-  width: 350px;
+  /* width: 50%; */
+  /* height: fit-content;
+  margin-left: 50px; */
   /* position: relative; */
   /* align-content: center; */
-  /* justify-content: center; */
+  justify-content: center;
 }
 #event_wrapper > a {
   color: black;
@@ -119,7 +132,7 @@ a > .event:hover {
 }
 
 .event > img {
-  width: 250px;
+  width: 350px;
   margin: 20px;
   height: 20vh;
 }
@@ -137,6 +150,7 @@ a > .event:hover {
   width: 600px;
   height: 800px;
   float: right;
+  margin-left: 300px;
   margin-right: 50px;
   margin-bottom: 50px;
   cursor: zoom-in;
@@ -162,11 +176,15 @@ a > .event:hover {
   width: 400px;
   border-style: solid;
   background-color: white;
-  height: 50vh;
+  height: 100vh;
+  margin-left: 50px;
 }
 .tickets {
   list-style: none;
   margin: 10px;
+}
+.tickets > p {
+  font-size: x-small;
 }
 .tickets_section > .slider {
   margin-left: 70px;
@@ -212,4 +230,56 @@ a > .event:hover {
   width: 700px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
   margin-left: 50px;
+}
+#review_form_wrapper > .inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs > input {
+  width: 100px;
+  margin: 15px;
+}
+.inputs > textarea {
+  width: 400px;
+  margin: 15px;
+}
+.inputs > button {
+  width: 100px;
+  float: right;
+  margin: 15px;
+}
+
+.tickets_section > .slider_range {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.tickets_section > h3 {
+  margin-left: 30px;
+}
+
+.slider_range {
+  display: flex;
+  border-style: solid;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.slider_range > input {
+  width: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.slider {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.info_icon p {
+  display: none;
+}
+.info_icon:hover p {
+  display: block;
 }

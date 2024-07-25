@@ -7,12 +7,16 @@ import { useSelector } from "react-redux";
 
 function ReviewFormPage() {
   const [rating, setRating] = useState(0);
-  const [customerId, setCustomerId] = useState("");
+  const [customerId, setCustomerId] = useState(0);
   const [venueId, setVenueId] = useState("");
   const [description, setDescription] = useState("");
   const [postReview] = usePostReviewMutation();
+  const [text, setText] = useState("");
   //   const [value, setValueState] = useState();
   const token = useSelector((state) => state.auth.token);
+  const handleCharChange = (e) => {
+    console.log(e.target.value);
+  };
 
   const submit = async (event) => {
     event.preventDefault();
@@ -22,8 +26,8 @@ function ReviewFormPage() {
     }
     try {
       await postReview({
-        venue_id: venueId,
-        customer_id: customerId,
+        venue_id: parseInt(venueId),
+        customer_id: parseInt(customerId),
         Rating: rating,
         description: description,
       }).unwrap();
@@ -51,7 +55,7 @@ function ReviewFormPage() {
           </Typography>
           <hr />
         </div>
-        <div>
+        <div className={"inputs"}>
           <h2>2. Write Your Review</h2>
           <input
             onChange={(e) => setCustomerId(e.target.value)}
