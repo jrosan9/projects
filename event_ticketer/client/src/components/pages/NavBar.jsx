@@ -5,6 +5,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { logout } from "../../../slices/authSlice";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 function Navbar() {
   const { isLoading, data } = useGetAllCategoriesQuery();
   const categories = useSelector((state) => state.categories);
