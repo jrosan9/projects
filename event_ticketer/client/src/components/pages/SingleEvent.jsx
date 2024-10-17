@@ -919,11 +919,10 @@ function SingleEvent() {
                   <li className={"tickets"} key={ticket.number}>
                     Standard Ticket Price: ${ticket.price}
                     <select>
-                      <option> ---Choose tutorial--- </option>
-                      <option> w3schools </option>
-                      <option> Javatpoint </option>
-                      <option> tutorialspoint </option>
-                      <option> geeksforgeeks </option>
+                      <option>1</option>
+                      <option> 2</option>
+                      <option>3</option>
+                      <option>4</option>
                     </select>
                     {ticket.price < ticketFloorAmount ? (
                       <div className="info_icon">
