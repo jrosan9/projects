@@ -724,12 +724,24 @@ import { useGetAllVenuesQuery } from "../../../slices/api";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import InfoIcon from "@mui/icons-material/Info";
+import { styled, alpha } from "@mui/material/styles";
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import EditIcon from "@mui/icons-material/Edit";
+import Divider from "@mui/material/Divider";
+import ArchiveIcon from "@mui/icons-material/Archive";
+import FileCopyIcon from "@mui/icons-material/FileCopy";
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+
 function SingleEvent() {
   const events = useSelector((state) => state.events);
   const venues = useSelector((state) => state.venue);
 
   const params = useParams();
   const { isLoading } = useGetAllVenuesQuery();
+  const token = useSelector((state) => state.auth.token);
   const selectedEvent = events.find((i) => i.id === Number(params.id));
   const selectedVenue = venues.find((i) => i.id === selectedEvent?.venue_id);
   const [minPrice, setMinPrice] = useState(
@@ -906,6 +918,13 @@ function SingleEvent() {
                 {tickets.slice(0, 10).map((ticket) => (
                   <li className={"tickets"} key={ticket.number}>
                     Standard Ticket Price: ${ticket.price}
+                    <select>
+                      <option> ---Choose tutorial--- </option>
+                      <option> w3schools </option>
+                      <option> Javatpoint </option>
+                      <option> tutorialspoint </option>
+                      <option> geeksforgeeks </option>
+                    </select>
                     {ticket.price < ticketFloorAmount ? (
                       <div className="info_icon">
                         <InfoIcon />
