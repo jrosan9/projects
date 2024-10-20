@@ -7,6 +7,7 @@ import EventsByCategoryPage from "./components/pages/EventsByCategoryPage";
 import SingleEvent from "./components/pages/SingleEvent";
 import VenuePage from "./components/pages/VenuePage";
 import ReviewFormPage from "./components/pages/ReviewFormPage";
+import Checkoutpage from "./components/pages/Checkoutpage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           element={<EventsByCategoryPage />}
         />
         <Route path={"/review_form"} element={<ReviewFormPage />} />
+        <Route path={"/checkout"} element={<Checkoutpage />} />
       </Routes>
     </>
   );

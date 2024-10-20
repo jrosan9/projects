@@ -924,6 +924,9 @@ function SingleEvent() {
                       <option>3</option>
                       <option>4</option>
                     </select>
+                    <Link to={"/checkout"}>
+                      <button id={"checkout_button"}>Checkout</button>
+                    </Link>
                     {ticket.price < ticketFloorAmount ? (
                       <div className="info_icon">
                         <InfoIcon />
