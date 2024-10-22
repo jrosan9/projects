@@ -3,12 +3,12 @@ import React from "react";
 function Checkoutpage({ quantity, ticketValue }) {
   return (
     <>
-      <div>
+      {/* <div>
         <h1>Checkout</h1>
         <p>Ticket Price: ${ticketValue}</p>
         <p>Quantity: {quantity}</p>
         <p>Total: ${ticketValue * quantity}</p>
-      </div>
+      </div> */}
     </>
   );
 }
