@@ -735,7 +735,7 @@ import FileCopyIcon from "@mui/icons-material/FileCopy";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { Link } from "react-router-dom";
-import Checkoutpage from "./Checkoutpage";
+import Checkoutpage from "./components/pages/Checkoutpage";
 
 function SingleEvent({ onCheckout }) {
   const events = useSelector((state) => state.events);

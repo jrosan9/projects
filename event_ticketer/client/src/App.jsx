@@ -14,6 +14,7 @@ function App() {
 
   const handleCheckout = (ticketValue, quantity) => {
     setCheckoutData({ ticketValue, quantity });
+    Navigate("/checkout");
   };
   return (
     <>
