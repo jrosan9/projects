@@ -934,7 +934,7 @@ function SingleEvent({ onCheckout }) {
                       <button
                         id={"checkout_button"}
                         onClick={() => {
-                          ticket.price, quantity;
+                          onCheckout(ticket.price, quantity);
                         }}
                       >
                         Checkout
