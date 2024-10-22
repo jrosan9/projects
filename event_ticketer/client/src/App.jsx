@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useState } from "react";
 import Navbar from "./components/pages/NavBar";
 import { Route, Routes } from "react-router-dom";
 import LoginRegister from "./components/pages/LoginRegister";
