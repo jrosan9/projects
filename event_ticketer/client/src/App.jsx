@@ -17,13 +17,14 @@ function App() {
   };
   return (
     <>
-      <SingleEvent onCheckout={handleCheckout} />
-      {checkoutData && <Checkoutpage {...checkoutData} />}
       <Navbar />
       <Routes>
         <Route index element={<Homepage />} />
         <Route path={"/venue/:id"} element={<VenuePage />} />
-        <Route path={"/event/:id"} element={<SingleEvent />} />
+        <Route
+          path={"/event/:id"}
+          element={<SingleEvent onCheckout={handleCheckout} />}
+        />
         <Route path={"/login"} element={<LoginRegister />} />
         <Route
           path={"events/category/:id"}
@@ -32,6 +33,7 @@ function App() {
         <Route path={"/review_form"} element={<ReviewFormPage />} />
         <Route path={"/checkout"} element={<Checkoutpage />} />
       </Routes>
+      {checkoutData && <Checkoutpage {...checkoutData} />}
     </>
   );
 }
