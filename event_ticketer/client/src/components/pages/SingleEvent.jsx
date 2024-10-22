@@ -735,8 +735,9 @@ import FileCopyIcon from "@mui/icons-material/FileCopy";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { Link } from "react-router-dom";
+import Checkoutpage from "./Checkoutpage";
 
-function SingleEvent() {
+function SingleEvent({ onCheckout }) {
   const events = useSelector((state) => state.events);
   const venues = useSelector((state) => state.venue);
 
@@ -757,6 +758,7 @@ function SingleEvent() {
   //   const [minPrice, setMinPrice] = useState(0);
   //   const [maxPrice, setMaxPrice] = useState(0);
   const [tickets, setTickets] = useState([]);
+  const [quantity, setQuantity] = useState(1);
   const valuetext = (value) => {
     return `$${value}`;
   };
@@ -919,14 +921,24 @@ function SingleEvent() {
                 {tickets.slice(0, 10).map((ticket) => (
                   <li className={"tickets"} key={ticket.number}>
                     Standard Ticket Price: ${ticket.price}
-                    <select>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
+                    <select
+                      value={quantity}
+                      onChange={(e) => setQuantity(Number(e.target.value))}
+                    >
+                      <option value={1}>1</option>
+                      <option value={2}>2</option>
+                      <option value={3}>3</option>
+                      <option value={4}>4</option>
                     </select>
                     <Link to={"/checkout"}>
-                      <button id={"checkout_button"}>Checkout</button>
+                      <button
+                        id={"checkout_button"}
+                        onClick={() => {
+                          ticket.price, quantity;
+                        }}
+                      >
+                        Checkout
+                      </button>
                     </Link>
                     {ticket.price < ticketFloorAmount ? (
                       <div className="info_icon">

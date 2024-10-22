@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { useState } from "react";
 import Navbar from "./components/pages/NavBar";
 import { Route, Routes } from "react-router-dom";
 import LoginRegister from "./components/pages/LoginRegister";
@@ -10,8 +11,15 @@ import ReviewFormPage from "./components/pages/ReviewFormPage";
 import Checkoutpage from "./components/pages/Checkoutpage";
 
 function App() {
+  const [checkoutData, setCheckoutData] = useState(null);
+
+  const handleCheckout = (ticketValue, quantity) => {
+    setCheckoutData({ ticketValue, quantity });
+  };
   return (
     <>
+      <SingleEvent onCheckout={handleCheckout} />
+      {checkoutData && <Checkoutpage {...checkoutData} />}
       <Navbar />
       <Routes>
         <Route index element={<Homepage />} />
