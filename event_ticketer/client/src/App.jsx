@@ -31,9 +31,18 @@ function App() {
           element={<EventsByCategoryPage />}
         />
         <Route path={"/review_form"} element={<ReviewFormPage />} />
-        <Route path={"/checkout"} element={<Checkoutpage />} />
+        <Route
+          path={"/checkout"}
+          element={<Checkoutpage {...checkoutData} />}
+        />
+
+        {checkoutData && (
+          <Route
+            path={"/checkout"}
+            element={<Checkoutpage {...checkoutData} />}
+          />
+        )}
       </Routes>
-      {checkoutData && <Checkoutpage {...checkoutData} />}
     </>
   );
 }
