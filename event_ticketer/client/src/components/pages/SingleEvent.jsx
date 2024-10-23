@@ -771,10 +771,10 @@ function SingleEvent({ onCheckout }) {
 
     // setMinPrice(min_price);
     // setMaxPrice(max_price);
-    console.log("Selected Event:", selectedEvent);
-    console.log("Selected Venue:", selectedVenue);
-    console.log("Min Price:", minPrice);
-    console.log("Max Price:", maxPrice);
+    // console.log("Selected Event:", selectedEvent);
+    // console.log("Selected Venue:", selectedVenue);
+    // console.log("Min Price:", minPrice);
+    // console.log("Max Price:", maxPrice);
 
     const seed = `${selectedEvent.id}${selectedVenue.id}`;
     const localStorageKey = `ticketPrices-${seed}`;
