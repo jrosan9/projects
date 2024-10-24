@@ -47,68 +47,105 @@ function SingleEvent({ onCheckout }) {
     return `$${value}`;
   };
 
-  useEffect(() => {
-    // if (selectedEvent && selectedVenue) {
-    // Extract price range values
-    //   const min_price = selectedEvent.price_range / 10;
-    //   const max_price = selectedEvent.price_range;
+  //   useEffect(() => {
+  // if (selectedEvent && selectedVenue) {
+  // Extract price range values
+  //   const min_price = selectedEvent.price_range / 10;
+  //   const max_price = selectedEvent.price_range;
 
-    // setMinPrice(min_price);
-    // setMaxPrice(max_price);
-    // console.log("Selected Event:", selectedEvent);
-    // console.log("Selected Venue:", selectedVenue);
-    // console.log("Min Price:", minPrice);
-    // console.log("Max Price:", maxPrice);
+  // setMinPrice(min_price);
+  // setMaxPrice(max_price);
+  // console.log("Selected Event:", selectedEvent);
+  // console.log("Selected Venue:", selectedVenue);
+  // console.log("Min Price:", minPrice);
+  // console.log("Max Price:", maxPrice);
+
+  //     const seed = `${selectedEvent.id}${selectedVenue.id}`;
+  //     const localStorageKey = `ticketPrices-${seed}`;
+
+  //     let tickets_array = JSON.parse(localStorage.getItem(localStorageKey)) || [];
+
+  //     // Function to generate a random price within the given range
+  //     if (tickets_array.length === 0) {
+  //       const generateRandomPrice = (min, max) => {
+  //         if (isNaN(min) || isNaN(max) || min >= max) {
+  //           return 0; // Return a default value if the input is invalid
+  //         }
+  //         return (Math.random() * (max - min) + min).toFixed(2);
+  //       };
+
+  //       const ticketCount = parseInt(selectedVenue.ticket_availability, 10) || 0;
+  //       tickets_array = Array.from({ length: ticketCount }, (_, index) => {
+  //         const ticketPrice = generateRandomPrice(minPrice, maxPrice); // Generate a random price for each ticket
+  //         return { number: index + 1, price: ticketPrice };
+  //       });
+
+  //       // Store generated prices in localStorage
+  //       localStorage.setItem(localStorageKey, JSON.stringify(tickets_array));
+  //     }
+
+  //     // Filter tickets based on minPrice and maxPrice
+  //     const filteredTickets = tickets_array.filter((ticket) => {
+  //       const price = parseFloat(ticket.price);
+  //       return price >= minPrice && price <= maxPrice;
+  //     });
+
+  //     setTickets(filteredTickets);
+  //     // }
+  //   }, [selectedEvent, selectedVenue, minPrice, maxPrice]);
+
+  //   if (isLoading) {
+  //     return <p>Loading venue...</p>;
+  //   }
+
+  //   if (!selectedEvent || !selectedVenue) {
+  //     return <p>Event or Venue not found.</p>;
+  //   }
+
+  //   const handleSliderChange = (event, newValue) => {
+  //     console.log("Slider change:", newValue);
+  //     setMinPrice(newValue[0]);
+  //     setMaxPrice(newValue[1]);
+  //   };
+  //   const handleSliderCommit = (event, newValue) => {
+  //     console.log("Slider commit:", newValue);
+  //     setMinPrice(newValue[0]);
+  //     setMaxPrice(newValue[1]);
+  //   };
+  useEffect(() => {
+    if (!selectedEvent || !selectedVenue) return;
 
     const seed = `${selectedEvent.id}${selectedVenue.id}`;
     const localStorageKey = `ticketPrices-${seed}`;
-
     let tickets_array = JSON.parse(localStorage.getItem(localStorageKey)) || [];
 
-    // Function to generate a random price within the given range
     if (tickets_array.length === 0) {
       const generateRandomPrice = (min, max) => {
-        if (isNaN(min) || isNaN(max) || min >= max) {
-          return 0; // Return a default value if the input is invalid
-        }
+        if (isNaN(min) || isNaN(max) || min >= max) return 0;
         return (Math.random() * (max - min) + min).toFixed(2);
       };
 
       const ticketCount = parseInt(selectedVenue.ticket_availability, 10) || 0;
       tickets_array = Array.from({ length: ticketCount }, (_, index) => {
-        const ticketPrice = generateRandomPrice(minPrice, maxPrice); // Generate a random price for each ticket
+        const ticketPrice = generateRandomPrice(minPrice, maxPrice);
         return { number: index + 1, price: ticketPrice };
       });
 
-      // Store generated prices in localStorage
       localStorage.setItem(localStorageKey, JSON.stringify(tickets_array));
     }
 
-    // Filter tickets based on minPrice and maxPrice
     const filteredTickets = tickets_array.filter((ticket) => {
       const price = parseFloat(ticket.price);
       return price >= minPrice && price <= maxPrice;
     });
 
     setTickets(filteredTickets);
-    // }
   }, [selectedEvent, selectedVenue, minPrice, maxPrice]);
 
-  if (isLoading) {
-    return <p>Loading venue...</p>;
-  }
-
-  if (!selectedEvent || !selectedVenue) {
-    return <p>Event or Venue not found.</p>;
-  }
+  if (isLoading) return <p>Loading venue...</p>;
+  if (!selectedEvent || !selectedVenue) return <p>Event or Venue not found.</p>;
 
   const handleSliderChange = (event, newValue) => {
-    console.log("Slider change:", newValue);
-    setMinPrice(newValue[0]);
-    setMaxPrice(newValue[1]);
-  };
-  const handleSliderCommit = (event, newValue) => {
-    console.log("Slider commit:", newValue);
     setMinPrice(newValue[0]);
     setMaxPrice(newValue[1]);
   };
