@@ -26,7 +26,10 @@ function SingleEvent({ onCheckout }) {
   const { isLoading } = useGetAllVenuesQuery();
   const token = useSelector((state) => state.auth.token);
   const selectedEvent = events.find((i) => i.id === Number(params.id));
-  const selectedVenue = venues.find((i) => i.id === selectedEvent?.venue_id);
+  //   const selectedVenue = venues.find((i) => i.id === selectedEvent?.venue_id);
+  const selectedVenue = selectedEvent
+    ? venues.find((i) => i.id === selectedEvent.venue_id)
+    : null;
   const [minPrice, setMinPrice] = useState(
     selectedEvent ? selectedEvent.price_range / 10 : 0
   );
