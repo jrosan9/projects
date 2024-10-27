@@ -19,6 +19,11 @@ app.use("/api/reviews", require("../Routes/reviews"));
 
 app.use("/", express.static(__dirname + "/../client/dist"));
 app.use("*", express.static(__dirname + "/../client/dist"));
-app.listen(port, () => {
+// app.listen(port, () => {
+//   console.log(`app listening on port ${port}`);
+// });
+
+app.listen(port, "0.0.0.0", () => {
+  // Change made here
   console.log(`app listening on port ${port}`);
 });
