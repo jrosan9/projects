@@ -156,8 +156,6 @@ a > .event:hover {
   cursor: zoom-in;
   background-position: center;
 }
-.venue_img > img:hover {
-}
 
 #eventByCategoryWrapper {
   width: 700px;

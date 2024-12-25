@@ -1,0 +1,185 @@
+body {
+  width: 100%;
+  margin: auto;
+  height: 100vh;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: center; Vertically centers content */
+  /* align-items: center; Horizontally centers content */
+}
+
+/*Container for the Cats */
+
+#cats_section {
+  /* width: 100%; */
+  box-sizing: border-box;
+  margin-top: 50px;
+}
+
+#cat_wrapper > ul {
+  /* width: 50%; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.cat_div ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Individual Cat Card */
+#cat {
+  width: 200px;
+  height: 500px;
+
+  /* justify-content: center; */
+
+  /* display: flex; */
+
+  /* align-items: flex-start; Center the content inside the cat card */
+  margin: 50px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Image Styling */
+#cat > img {
+  width: 100%; /*Ensures the image fills the width of the card */
+  height: auto; /*Maintains aspect ratio of the image */
+  border-radius: 8px; /* Optional: Adds rounded corners to the image */
+}
+
+/* Text Styling */
+#cat li {
+  font-weight: bold;
+  margin: 8px 0 4px;
+  list-style: none;
+}
+
+#cat p {
+  font-size: 14px;
+  color: #555;
+}
+
+.camera_icon_div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+  /* height: 10vh; */
+}
+
+#camera_icon {
+  width: 200px;
+  background-color: lightgray;
+}
+
+#nav_section > .logo_div {
+  background-color: rgba(18, 93, 197, 0.728);
+  display: flex;
+  justify-content: center;
+  /* height: 3vh;  */
+}
+
+#nav_section > img {
+  display: flex;
+  align-content: center;
+}
+
+.links {
+  background-color: green;
+  height: 5vh;
+}
+
+.links > a {
+  text-decoration: none;
+  color: white;
+  margin-top: 5px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+#search_bar_div {
+  display: flex;
+  justify-content: center;
+}
+#search_bar_div > input {
+  width: 400px;
+  border-radius: 10px;
+  height: 5vh;
+  padding-left: 10px;
+  font-size: larger;
+}
+
+.links > #search_link {
+  float: right;
+}
+
+#cat_form {
+  display: flex;
+  justify-content: center;
+
+  /* width: 500px; */
+  /* width: 300px; */
+}
+#cat_form > form {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  /* display: flex;
+  flex-direction: column; */
+  width: 500px;
+  border: solid;
+  border-width: 8px;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+form > input {
+  margin: 20px;
+  width: 300px;
+}
+
+form img {
+  width: 100px;
+  margin-left: 20px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+#email_login_div {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+#email_login_div input {
+  width: 500px;
+  height: 5vh;
+}
+
+#submit_btn_div {
+  display: flex;
+  justify-content: end;
+  margin-right: 500px;
+  margin-top: 30px;
+}
+
+#vote_button {
+  border: solid;
+  border-radius: 10px;
+  width: 10%;
+  height: 20px;
+  background-color: lightblue;
+}
+
+#cat_wrapper > div {
+  display: flex;
+  justify-content: center;
+}

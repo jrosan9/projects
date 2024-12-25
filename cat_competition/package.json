@@ -1,0 +1,16 @@
+{
+  "main": "./db/server.js",
+  "scripts": {
+    "start:dev": "nodemon server.js",
+    "seed": "npx prisma migrate reset --force && node ./db/seed.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.688.0",
+    "@prisma/client": "^5.22.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "prisma": "^5.22.0"
+  }
+}

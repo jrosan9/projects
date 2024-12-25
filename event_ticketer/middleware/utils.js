@@ -24,7 +24,6 @@ const requireUser = (req, res, next) => {
     }
     // localStorage.setItem("authToken", token);
     req.customer_Account = user;
-
     next();
   });
 };

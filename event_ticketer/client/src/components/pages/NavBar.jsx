@@ -27,7 +27,9 @@ function Navbar() {
         <div className={"navWrapper"}>
           <Link to="/">
             <img
-              src={"https://i.pngimg.me/thumb/f/720/comrawpixel6734648.jpg"}
+              src={
+                "https://static.vecteezy.com/system/resources/thumbnails/022/013/913/small/home-icon-illustration-image-vector.jpg"
+              }
               alt={"Home Icon"}
             />
           </Link>
